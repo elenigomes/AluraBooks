@@ -1,0 +1,62 @@
+.cabecalho__menu-hamburguer{
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /*foi usado para poder deixar livre a posição dele na .lista-menu, onde ficou absolute e 100% top*/
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    
+}
+
+.container_imagem {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none; /*usado para não aparecer a lista se não houver o click do botão na figura*/
+    position: absolute;
+    top: 100%; /*Para ficar na parte de baixo da figura-botao */
+    width: 60vw;
+}
+
+.container__botao:checked~.lista-menu {
+    display: block; 
+} /*Todo esse atributo serve para clicar no 
+botao e aparecer a lista em block, um item abaixo do outro*/
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo{
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link{
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container__botao{
+    display: none;
+}
+
