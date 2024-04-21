@@ -12,13 +12,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; /*foi usado para poder deixar livre a posição dele na .lista-menu, onde ficou absolute e 100% top*/
+    position: relative; /*foi usado para poder deixar livre a posicao dele na .lista-menu, onde ficou absolute e 100% top*/
 }
 
 .container {
     display: flex;
-    align-items: center;
-    
+    align-items: center;    
 }
 
 .container_imagem {
@@ -26,7 +25,7 @@
 }
 
 .lista-menu {
-    display: none; /*usado para não aparecer a lista se não houver o click do botão na figura*/
+    display: none; /*usado para nao aparecer a lista se nao houver o click do botao na figura*/
     position: absolute;
     top: 100%; /*Para ficar na parte de baixo da figura-botao */
     width: 60vw;
@@ -53,10 +52,58 @@ botao e aparecer a lista em block, um item abaixo do outro*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-transform: uppercase;
+    text-transform: uppercase; /*deixa as letras em maiusculas*/
 }
 
 .container__botao{
     display: none;
 }
 
+@media screen and (min-width: 1024px) {
+
+    .container__titulo,
+    .container__titulo--negrito {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .opcoes {
+        display: flex;
+    }
+
+    .opcoes__item {
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opcoes__link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .container__imagem-transparente {
+        display: none;
+    }
+
+    .cabecalho__menu-hamburguer {
+        display: none;
+    }
+
+    .opcoes__botao:checked~.lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .opcoes__botao{
+        display: none;
+    }
+}
