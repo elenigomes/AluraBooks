@@ -40,6 +40,7 @@ botao e aparecer a lista em block, um item abaixo do outro*/
 .lista-menu__item {
     padding: 1em;
     background-color: var(--branco);
+    text-decoration: none;
 }
 
 .lista-menu__titulo{
@@ -53,9 +54,14 @@ botao e aparecer a lista em block, um item abaixo do outro*/
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-transform: uppercase; /*deixa as letras em maiusculas*/
+    text-decoration: none;
 }
 
 .container__botao{
+    display: none;
+}
+
+.container__titulo, .opcoes, .container__texto{
     display: none;
 }
 
@@ -106,4 +112,38 @@ botao e aparecer a lista em block, um item abaixo do outro*/
     .opcoes__botao{
         display: none;
     }
+
+    .lista-menu__item:hover {
+        background: var(--azul-degrade);
+    }
+    
+    .lista-menu__item:hover>.lista-menu__link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+
+    
+}
+
+
+@media screen and (min-width: 1728px) {
+    .opcoes{
+        margin-right: auto;
+    }
+
+    .container__texto{
+        display: block;
+    }
+
+    .container__link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .cabecalho{
+        padding: 0 2em;
+    }
+    
 }
